@@ -1,0 +1,23 @@
+<table class="table" id="listing_articles">
+  <thead>
+    <tr data-hook="admin_blog_index_headers">
+      <th><%= Spree.t(:title) %></th>
+      <th><%= Spree.t(:created_by) %></th>
+      <th><%= Spree.t(:article_available_on) %></th>
+      <th><%= Spree.t(:category) %></th>
+      <th class="actions"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @collection.each do |article| %>
+      <tr>
+        <td><%= article.title %></td>
+        <td><%= article.get_author_name %></td>
+        <td><%= article.available_on %></td>
+        <td><%= article.get_category_name %></td>
+        <td class="actions actions-3 text-right">          
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
