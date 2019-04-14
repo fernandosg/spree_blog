@@ -1,2 +1,2 @@
-class Spree::ArticleCategory < ApplicationRecord
+class Spree::ArticleCategory < Spree::Base
 end
