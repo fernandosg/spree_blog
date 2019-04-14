@@ -15,7 +15,7 @@
     <% @collection.each do |article| %>
       <tr>
         <td><%= article.title %></td>
-        <td><%= article.get_author_name %></td>
+        <td><%= article.get_author_full_name %></td>
         <td><%= article.available_on %></td>
         <td><%= article.get_category_name %></td>
         <td class="actions actions-3 text-right">
