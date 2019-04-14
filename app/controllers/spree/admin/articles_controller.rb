@@ -13,6 +13,10 @@ class Spree::Admin::ArticlesController < Spree::Admin::ResourceController
     @article = Spree::Article.new
   end
 
+  def edit
+    @article = Spree::Article.find(params[:id])
+  end
+
   def create
     @article = Spree::Article.new permitted_resource_params
     @article.user_id = spree_current_user.id
