@@ -4,8 +4,8 @@ class CreateSpreeArticles < ActiveRecord::Migration[5.2]
       t.string :title
       t.text :body
       t.datetime :available_on
-      t.references :spree_user, foreign_key: true
-      t.references :spree_article_category, foreign_key: true
+      t.references :user
+      t.references :article_category
 
       t.timestamps
     end
