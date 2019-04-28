@@ -3,4 +3,7 @@ Spree::Core::Engine.add_routes do
   namespace :admin do
     resources :articles
   end
+  namespace :blog do
+    resources :articles, param: :slug
+  end
 end
