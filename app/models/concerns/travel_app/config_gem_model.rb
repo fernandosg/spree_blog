@@ -23,5 +23,9 @@ module Concerns::TravelApp::ConfigGemModel
       self.options = params
       self.save
     end
+
+    def type_of_field field
+      SpreeBlog.configuration.attributes_config[field.to_sym]
+    end
   end
 end

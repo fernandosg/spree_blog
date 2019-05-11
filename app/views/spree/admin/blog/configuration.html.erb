@@ -1,7 +1,7 @@
 <%= form_for [:admin, @configuration], method: :post do |f| %>
   <% @configuration.options.to_hash.each do |key, option| %>
-    <%= label_tag "blog_configuration[options][#{key}]", key %> 
-    <%= text_field_tag "blog_configuration[options][#{key}]", f.object.options[key] %>
+    <%= label_tag "blog_configuration[options][#{key}]", key %>
+    <%= custom_input_field f.object.type_of_field(key), "blog_configuration[options][#{key}]", f.object.options[key] %>
   <% end %>
   <%= f.submit :send %>
 <% end %>

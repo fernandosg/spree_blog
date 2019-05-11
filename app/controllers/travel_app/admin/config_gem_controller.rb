@@ -14,6 +14,7 @@ class TravelApp::Admin::ConfigGemController < Spree::Admin::ResourceController
       else
         flash[:error] = 'Hubo un error en la actualización de la gema'
       end
+      redirect_to action: :configuration
     end
   end
 
@@ -29,6 +30,6 @@ class TravelApp::Admin::ConfigGemController < Spree::Admin::ResourceController
   end
 
   def gem_form_attributes
-    params.require(@model_class).require("options").permit(instance_config.attributes_config)
+    params[@model_class]["options"]
   end
 end

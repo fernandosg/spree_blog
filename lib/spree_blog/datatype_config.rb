@@ -10,7 +10,7 @@ module SpreeBlog
   end
 
   class Configuration
-    attr_accessor :attributes_config
+    attr_accessor :attributes_config, :attributes
 
     def initialize
       @attributes_config = {}
@@ -18,7 +18,7 @@ module SpreeBlog
     end
 
     def attributes_to_array
-      @attributes = @attributes_config.keys?
+      @attributes = @attributes_config.keys
     end
   end
 end
