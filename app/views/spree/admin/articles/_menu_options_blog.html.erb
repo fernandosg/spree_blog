@@ -1,0 +1,8 @@
+<ul class="nav nav-sidebar">
+  <li class="sidebar-menu-item"><a data-toggle="collapse" data-parent="#sidebar" href="#sidebar-configuration-blog"><span class="icon icon-wrench"></span><span class="text">Blog</span><span class="icon icon-chevron-left pull-right"></span></a>
+    <ul data-hook="admin_configurations_sidebar_menu" class="collapse nav nav-pills nav-stacked" id="sidebar-configuration-blog">
+      <%= tab Spree::BlogConfiguration, url: admin_blog_configuration_path, icon: "file", label: "Configuración" %>
+      <%= tab Spree::Article, url: admin_articles_path, icon: "file", label: "Artículos" %>
+    </ul>
+  </li>
+</ul>

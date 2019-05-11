@@ -1,0 +1,5 @@
+<% form_for [:admin, @configuration] do |f| %>
+  <% @configuration.options.to_hash.each do |key, option| %>
+    <%= f.text_field f[:configuration][key] %>
+  <% end %>
+<% end %>
