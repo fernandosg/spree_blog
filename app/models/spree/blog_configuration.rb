@@ -2,7 +2,7 @@ class Spree::BlogConfiguration < ApplicationRecord
   include Concerns::TravelApp::ConfigGemModel
 
   def initialize object
-    @attributes_config = [:articles_per_page, :is_on]
+    @attributes_config = SpreeBlog.configuration.attributes
     super
   end
 
