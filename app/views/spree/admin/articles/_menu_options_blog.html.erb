@@ -3,6 +3,7 @@
     <ul data-hook="admin_configurations_sidebar_menu" class="collapse nav nav-pills nav-stacked" id="sidebar-configuration-blog">
       <%= tab Spree::BlogConfiguration, url: admin_blog_configuration_path, icon: "file", label: "Configuración" %>
       <%= tab Spree::Article, url: admin_articles_path, icon: "file", label: "Artículos" %>
+      <%= tab Spree::ArticleCategory, url: admin_article_categories_path, icon: "file", label: "Categoría de artículos" %>
     </ul>
   </li>
 </ul>

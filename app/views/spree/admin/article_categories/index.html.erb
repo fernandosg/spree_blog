@@ -1,0 +1,22 @@
+<% content_for :page_actions do %>
+  <%= button_link_to Spree.t(:new_article_category), new_admin_article_category_url, { class: "btn-success", icon: 'add', id: 'admin_new_article' } %>
+<% end if can?(:create, Spree::ArticleCategory) %>
+<table class="table" id="listing_articles">
+  <thead>
+    <tr data-hook="admin_blog_index_headers">
+      <th><%= Spree.t(:name) %></th>
+      <th><%= Spree.t(:description) %></th>
+      <th class="actions"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @collection.each do |article_category| %>
+      <tr>
+        <td><%= article_category.name %></td>
+        <td><%= article_category.description %></td>
+        <td class="actions actions-3 text-right">
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
