@@ -1,5 +1,10 @@
-class ArticlesController < Spree::StoreController
+class Spree::ArticlesController < Spree::BaseGemController
   before_action :set_article, except: :index
+
+  def initialize
+    @model_configuration = :blog_configuration
+    super
+  end
 
   def index
     @articles = Spree::Article.all
