@@ -1,4 +1,4 @@
-class Spree::ArticlesController < Spree::BaseGemController
+class Spree::Blog::ArticlesController < Spree::BaseGemController
   before_action :set_article, except: :index
 
   def initialize
@@ -6,8 +6,7 @@ class Spree::ArticlesController < Spree::BaseGemController
     super
   end
 
-  def index
-    @articles = Spree::Article.all
+  def show
   end
 
   private
