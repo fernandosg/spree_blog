@@ -10,4 +10,5 @@ Spree::Core::Engine.add_routes do
   namespace :blog do
     resources :articles, param: :slug
   end
+  get "/blog", to: "articles#index"
 end
