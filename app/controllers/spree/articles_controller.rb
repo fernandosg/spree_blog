@@ -1,5 +1,6 @@
 class Spree::ArticlesController < Spree::BaseGemController
   before_action :set_article, except: :index
+  include Spree::ResourceMultimediumHelper
 
   def initialize
     @model_configuration = :blog_configuration

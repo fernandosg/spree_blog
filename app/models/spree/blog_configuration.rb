@@ -1,5 +1,4 @@
 class Spree::BlogConfiguration < ApplicationRecord
-  include Concerns::TravelApp::ConfigGemModel
 
   def initialize object
     @attributes_config = SpreeBlog.configuration.attributes
