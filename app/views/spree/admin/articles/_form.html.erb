@@ -14,6 +14,7 @@
       <%= f.error_message_on :body %>
     <% end %>
   </div>
+  <div id="example"></div>
 
   <div data-hook="admin_articles_form_category">
     <%= f.field_container :article_categories, class: ["form-group"] do %>
@@ -22,3 +23,8 @@
     <% end %>
   </div>
 </div>
+<% content_for :extrajs do %>
+<script type="text/javascript">
+  var editor = new FroalaEditor('#article_body');
+</script>
+<% end %>
