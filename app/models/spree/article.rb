@@ -17,6 +17,6 @@ class Spree::Article < ApplicationRecord
   end
 
   def update_html_content
-    self.update_column(:body_html, regex_tag_for_image(body))
+    self.update_column(:body_html, regex_tag_for_image(CGI.unescapeHTML(body)))
   end
 end
