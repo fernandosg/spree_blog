@@ -9,7 +9,7 @@ class Spree::Article < ApplicationRecord
     if self.slug.nil?
       self.slug = title.parameterize
     else
-      searching = Spree::Article.where(slug: slug).count
+      searching = Spree::Article.where(slug: slug).where.not(id: self.id).count
       self.slug = "#{self.slug}-count" if searching > 0
     end
   end
