@@ -25,6 +25,8 @@
 </div>
 <% content_for :extrajs do %>
 <script type="text/javascript">
-  var editor = new FroalaEditor('#article_body');
+  var editor = new FroalaEditor('#article_body', {
+    imageManagerLoadURL: "<%= api_multimedia_all_files_path(token: spree_current_user.spree_api_key) %>"
+  });
 </script>
 <% end %>
